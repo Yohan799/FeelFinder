@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Emotion-Based Image Search</title>
+    <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Search by Emotion, Sentiment or Mood</h1>
+        <form id="searchForm">
+            <input type="text" name="query" placeholder="e.g. calm beach, angry fire, joyful faces" required />
+            <button type="submit">Search</button>
+        </form>
+        <div id="results" class="results-grid"></div>
+    </div>
+
+    <script>
+        document.getElementById("searchForm").onsubmit = async function(e) {
+            e.preventDefault();
+            const formData = new FormData(e.target);
+            const response = await fetch("/search", {
+                method: "POST",
+                body: new URLSearchParams(formData)
+            });
+            const data = await response.json();
+            const results = document.getElementById("results");
+            results.innerHTML = "";
+            data.forEach(item => {
+                const div = document.createElement("div");
+                div.className = "image-card";
+                div.innerHTML = `<img src="${item.url}" alt="${item.title}" />
+                                 <p>${item.title}</p>`;
+                results.appendChild(div);
+            });
+        };
+    </script>
+</body>
+</html>
