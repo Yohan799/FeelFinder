@@ -106,6 +106,10 @@ Open your browser at: [http://localhost:5000](http://localhost:5000)
 
 ---
 
+## 📷 Preview
+
+![Storyboard Demo](https://github.com/yohan799/FeelFinder/blob/main/demo.png/)
+
 ## 🧰 Tech Stack
 
 | Layer     | Technology         |
