@@ -1,7 +1,7 @@
 
 # 🎯 FeelFinder - Emotion-Based Image Search Engine
 
-**MoodLens** is a smart web application that allows users to search for images using natural language expressions of **emotion**, **mood**, or **sentiment**. It leverages the power of **computer vision** (via OpenAI's CLIP model) and **natural language processing** to retrieve images that best match the *feeling* behind the user's query.
+**FeelFinder** is a smart web application that allows users to search for images using natural language expressions of **emotion**, **mood**, or **sentiment**. It leverages the power of **computer vision** (via OpenAI's CLIP model) and **natural language processing** to retrieve images that best match the *feeling* behind the user's query.
 
 ---
 
